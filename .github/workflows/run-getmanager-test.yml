@@ -1,11 +1,10 @@
 name: Test Run GetManager
 on:
-  workflow_dispatch: # 手动点击运行
+  workflow_dispatch:
 
 jobs:
   run_get:
     runs-on: ubuntu-latest
-    # uses必须和runson同级，缩进2空格
     uses: ./.github/workflows/get-manager.yml
     with:
       kernelsu_variant: ReSukiSU
