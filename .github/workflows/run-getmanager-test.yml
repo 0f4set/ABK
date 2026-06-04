@@ -1,0 +1,11 @@
+name: Test Run GetManager
+on:
+  workflow_dispatch: # 手动触发按钮
+jobs:
+  run_get:
+    runs-on: ubuntu-latest
+    uses: ./.github/workflows/get-manager.yml
+    with:
+      kernelsu_variant: ReSukiSU #可选: Official / SukiSU / ReSukiSU
+      ksu_branch: Stable(标准)
+      #custom_ref: 填commit哈希可不填
